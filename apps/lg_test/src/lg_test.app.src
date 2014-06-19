@@ -1,0 +1,12 @@
+{application, lg_test,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { lg_test_app, []}},
+  {env, []}
+ ]}.
