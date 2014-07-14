@@ -10,3 +10,12 @@ Basic usage:
 1> t:adv(60000, 10, 10).
 
 % cat out_*
+```
+
+Cgroups commands:
+
+**make cgroups_init** - create cgroup
+
+**make cgroups_clean** - remove cgroup
+
+**make cg_dev** - run erlang node with cgexec
