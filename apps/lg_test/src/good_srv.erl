@@ -32,6 +32,7 @@ handle_call(Req, _From, State) ->
 
 handle_cast(write_msg, State) ->
   ?DEBUG("THIS IS SOME LONG MESSAGE", []),
+  timer:sleep(1),
   gen_server:cast(self(), write_msg),
   {noreply, State};
 handle_cast(stop, State) ->
