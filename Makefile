@@ -6,7 +6,7 @@ CG_SUBSYSTEMS=cpuset,memory,blkio,cpu,cpuacct,devices,freezer,net_cls
 
 cgroups_init:
 	sudo cgcreate -a $(USER):$(USER) -f 777 -d 755 -s 777 -g $(CG_SUBSYSTEMS):$(CGNAME)
-cgrups_clean:
+cgroups_clean:
 	sudo cgdelete $(CG_SUBSYSTEMS):$(CGNAME)
 
 compile:
