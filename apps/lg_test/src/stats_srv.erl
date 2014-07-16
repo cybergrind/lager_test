@@ -55,7 +55,7 @@ handle_cast({test_start, Desc}, _) ->
   State = new_state(Desc),
   {noreply, State};
 handle_cast(loop_timer, State) ->
-  lager:info('Loop timer'),
+  lager:info("Loop timer"),
   case State of
     undefined -> ok;
     _ -> gen_server:cast(self(), loop) end,
